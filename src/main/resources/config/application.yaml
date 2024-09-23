@@ -1,0 +1,33 @@
+server:
+  shutdown: graceful
+  port: 8080
+  servelet:
+    encoding:
+      charset: utf-8
+      force: true
+
+spring:
+  application:
+    name: Spring Data JPA Sample Application
+
+  # Default Active Profile
+  profiles:
+    active: local
+
+  # Database Configuration
+  datasource:
+    driverClassName: org.postgresql.Driver
+
+  # JPA Configuration
+  jpa:
+    show-sql: true
+    properties:
+      hibernates:
+        format_sql: true
+    hibernates:
+      ddl-auto: update
+
+  # Output Log Colorize
+  output:
+    ansi:
+      enabled: always
